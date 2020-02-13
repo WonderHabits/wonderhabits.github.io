@@ -2,7 +2,7 @@
 title: GitHub
 layout: category
 permalink: /categories/dev-github/
-taxonomy: Github
+taxonomy: GitHub
 author_profile: false
 sidebar:
   nav: "posts"
