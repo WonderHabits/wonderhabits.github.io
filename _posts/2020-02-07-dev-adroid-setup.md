@@ -1,12 +1,12 @@
 ---
 title: "Android Development"
 categories:
-  - dev
+  - android
 tags:
-  - Android
+  - dev
 toc: true
-last_modified_at: 2020-02-10
+last_modified_at: 2020-02-13
 comments: true
 ---
 
-Dev - Android development
+## Dev - Android development

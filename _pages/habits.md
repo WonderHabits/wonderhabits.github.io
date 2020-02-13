@@ -1,7 +1,11 @@
 ---
-title: "Habits"
-layout: category
-permalink: /categories/habits/
-taxonomy: habits
-author_profile: true
+title: Habits
+layout: collection
+permalink: /habits/
+collection: habits
+entries_layout: grid
+classes: wide
 ---
+
+Sample document listing for the collection `_habits`.
+

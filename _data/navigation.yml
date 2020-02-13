@@ -6,7 +6,31 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "About"
     url: /about/
-  - title: "Dev"
-    url: /categories/dev/
+  - title: "Dev Post"
+    url: /categories/
   - title: "Habits"
-    url: /categories/habits/
+    url: /collection-archive/
+
+posts:
+  - title: Dev
+    children:
+      - title: "Android"
+        url: /categories/#android
+      - title: "Flutter"
+        url: /categories/#flutter
+      - title: "GitHub"
+        url: /categories/#github
+  - title: Uncategorized
+    children:
+      - title: "Recommended Books"
+        url: /categories/#recommended_books
+      - title: "Extra Tips"
+        url: /categories/#extra_tips
+
+habits:
+  - title: Habits
+    children:
+      - title: "Workout"
+        url: /habits/workout/
+      - title: "English Study"
+        url: /habits/english_study/

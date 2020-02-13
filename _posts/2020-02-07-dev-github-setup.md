@@ -1,11 +1,11 @@
 ---
 title: "Github Blog"
 categories:
-  - dev
+  - github
 tags:
-  - Github Blog
+  - dev
 toc: true
-last_modified_at: 2020-02-10
+last_modified_at: 2020-02-13
 comments: true
 ---
 
