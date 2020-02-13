@@ -308,14 +308,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _habits
-  - scope:
-      path: ""
-      type: habits
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-      sidebar:
-        nav: "habits"

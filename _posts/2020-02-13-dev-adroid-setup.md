@@ -1,12 +1,12 @@
 ---
-title: "Github Blog"
+title: "Android Development"
 categories:
-  - github
+  - Android
 tags:
-  - dev
+  - Dev
 toc: true
 last_modified_at: 2020-02-13
 comments: true
 ---
 
-## Dev - Github blog
+## Dev - Android Development
