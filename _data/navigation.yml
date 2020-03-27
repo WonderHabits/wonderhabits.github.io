@@ -18,6 +18,8 @@ posts:
         url: /categories/dev-flutter/
       - title: "GitHub"
         url: /categories/dev-github/
+      - title: "Koin"
+        url: /categories/dev-koin/
   - title: Habits
     children:
       - title: "Learn English"
