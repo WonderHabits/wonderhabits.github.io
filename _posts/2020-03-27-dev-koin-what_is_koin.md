@@ -6,6 +6,8 @@ categories:
   - Koin
 tags:
   - Dev
+  - Koin
+  - Android
 toc: true
 last_modified_at: 2020-03-27
 ---
@@ -13,7 +15,7 @@ last_modified_at: 2020-03-27
 Kotlin으로 Android 개발 시 사용가능항 DI(Dependency Injection) framework에는 dagger2, Koin, kodein등이 존재한다. 어떤것을 사용해야 가장 효율적이고 가장 빠르게 구현할 수 있을까 하는 의문점에 수 많은 개발 블로그, 유투브를 검색한 결과 Koin 가장 좋다는 결론을 갖게 되었다.
 누구 말 맞다나 Koin의 네이밍은 kotlin에서 'tl' 만 빼서 이름을 지은거라고..
 
-'Kotlin' - 'tl' = 'Koin'
+  **'Kotlin' - 'tl' = 'Koin'**
 
 # Koin 이란?
 Koin은 순수 Kotlin만으로 작성된 DI framework로 매우 경량화 되어 있고 실용적인 API이다. 자세한 사용법은 차차 적어 나가겠다.
