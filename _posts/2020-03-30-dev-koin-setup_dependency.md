@@ -12,9 +12,9 @@ toc: true
 last_modified_at: 2020-03-30
 ---
 # Gradle Dependencies Setup
-Kotlin으로 Android 개발 시 가장 우선적으로 해야 할 것은 build.gradle (Module:app) 에 다음과 같이 dependencies세팅 해주어야 한다.
+Kotlin으로 Android 개발 시 가장 우선적으로 해야 할 것은 build.gradle (Module:app) 에 다음과 같이 dependencies setup을 해주어야 한다.
 
-최신 버전은 https://doc.insert-koin.io/#/setup/index 에서 확인 가능하다.
+최신 버전은  ([Koin](https://doc.insert-koin.io/#/setup/index)) 에서 확인 가능하다.
 
 ```kotlin
 // 최신 stable version
