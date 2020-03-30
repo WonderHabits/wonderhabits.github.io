@@ -78,9 +78,9 @@ google:
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
-bing_site_verification   :
+bing_site_verification   : 7508B4D2C688764B2944483B64599651
 yandex_site_verification :
-naver_site_verification  :
+naver_site_verification  : 6538a8e0d3a4b9e479612eb885160095
 
 # Social Sharing
 twitter:
