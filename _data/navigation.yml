@@ -14,17 +14,17 @@ main:
 posts:
   - title: Dev
     children:
-      - title: "Android"
-        url: /categories/dev-android/
-      - title: "Flutter"
-        url: /categories/dev-flutter/
-      - title: "GitHub"
-        url: /categories/dev-github/
-      - title: "Koin"
-        url: /categories/dev-koin/
-  - title: Habits
-    children:
-      - title: "Learn English"
-        url: /categories/habits-learn_english/
-      - title: "Workout"
-        url: /categories/habits-workout/
+      - title: "Coding Test"
+        url: /categories/dev-coding-test/
+  #     - title: "Flutter"
+  #       url: /categories/dev-flutter/
+  #     - title: "GitHub"
+  #       url: /categories/dev-github/
+  #     - title: "Koin"
+  #       url: /categories/dev-koin/
+  # - title: Habits
+  #   children:
+  #     - title: "Learn English"
+  #       url: /categories/habits-learn_english/
+  #     - title: "Workout"
+  #       url: /categories/habits-workout/
