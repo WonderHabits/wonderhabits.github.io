@@ -114,6 +114,7 @@ void main() {
 36 45 64 70 89 90 91 98 100 100
 ```
 
+
 # 2. Field가 2개일 때 Merge Sort
 
 ```cpp
