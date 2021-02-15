@@ -15,7 +15,7 @@ posts:
   - title: Dev
     children:
       - title: "Coding Test"
-        url: /categories/dev-coding-test/
+        url: /categories/dev-coding-interview/
   #     - title: "Flutter"
   #       url: /categories/dev-flutter/
   #     - title: "GitHub"
