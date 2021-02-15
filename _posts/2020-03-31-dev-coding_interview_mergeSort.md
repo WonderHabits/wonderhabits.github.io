@@ -29,7 +29,7 @@ last_modified_at: 2021-02-15
 
  Merge Sort를 이해하는 가장 쉬운 방법은 위 영상을 그냥 10번만 보면 된다. Merge Sort를 이렇게 쉽게 설명한 자료는 찾아보기 매우 힘들고 특히 선생님의 딕션이 뇌에 팍팍 꽂힌다.
 
-# 1. Field 가 1개일 때 Merge Sort
+# 1. Field가 1개일 때 Merge Sort
 
 ```cpp
 #include <iostream>
