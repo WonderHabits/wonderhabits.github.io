@@ -1,5 +1,5 @@
 ---
-title: "Merge Sort"
+title: "Merge Sort (C++)"
 header:
   # image: /assets/images/koin.jpg
 categories:
@@ -11,8 +11,6 @@ tags:
 toc: true
 last_modified_at: 2021-02-15
 ---
-# Merge Sort (C++)
-
 [합병 정렬](https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC)
 
  Coding Interview에서 자주 사용되는 Sorting 알고리즘 중 하나이다.
