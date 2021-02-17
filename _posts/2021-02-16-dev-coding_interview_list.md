@@ -1,5 +1,5 @@
 ---
-title: "[STL] List contaier구현 (C++)"
+title: "[STL] List container구현 (C++)"
 header:
   # image: /assets/images/koin.jpg
 categories:
