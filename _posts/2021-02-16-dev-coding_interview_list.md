@@ -124,7 +124,7 @@ private:
     Node* createNode(const int val);
     void deleteNode(Node** node);
     bool isEmpty();
-    
+
 public:
     List();
     ~List();
@@ -135,6 +135,7 @@ public:
     void pop_front();
     void insert(int pos, int val);
     void erase(int pos);
+    void remove(int val);
 };
 
 void main() {
@@ -151,13 +152,12 @@ void main() {
     lst.show("pop_back");
     lst.pop_front();
     lst.show("pop_front");
-    lst.insert(1, 10);
+    lst.insert(0, 10);
     lst.show("insert 10 at second");
-
-    //lst.erase(it);
-    //show(lst, "erase element at third");
-    //lst.remove(1);
-    //show(lst, "erase 1");
+    lst.erase(2);
+    lst.show("erase element at third");
+    lst.remove(1);
+    lst.show("erase 1");
 }
 
 void List::init()
@@ -297,24 +297,27 @@ void List::pop_front()
 void List::insert(int pos, int val)
 {
     if (!isEmpty()) {
+        // cursor Node 를 이동
         Node* cur = front;
-        // back 이 아닐때에는 다음 노드로 넘어간다.
-        for (int i = 0; i < pos - 1; i++) {
-            if (cur != back)
-                cur = cur->next;
+        for (int i = 0; i < pos; i++) {
+            if (cur == back)
+                return;
+            cur = cur->next;
         }
+        // pos의 바로 뒤에 새로운 노드 삽입
         if (cur == back) {
-            // 맨 끝에만 삽입
             push_back(val);
         }
         else {
-            // current node 뒤에 삽입
             Node* newNode = createNode(val);
+            Node* prev = cur;
             Node* next = cur->next;
-            cur->next = newNode;
-            newNode->prev = cur;
+            if(prev != nullptr)
+                prev->next = newNode;
+            if(next != nullptr)
+                next->prev = newNode;
+            newNode->prev = prev;
             newNode->next = next;
-            next->prev = newNode;
         }
     }
 }
@@ -322,26 +325,84 @@ void List::insert(int pos, int val)
 void List::erase(int pos)
 {
     if (!isEmpty()) {
+        // cursor Node 를 이동
         Node* cur = front;
-        // back 이 아닐때에는 다음 노드로 넘어간다.
         for (int i = 0; i < pos; i++) {
-            if (cur != back)
-                cur = cur->next;
+            if (cur == back)
+                return;
+            cur = cur->next;
         }
-        
-        if (cur == back) {
-            // 맨 끝에만 삽입
-            push_back(val);
+        if (front == back) {
+            delete cur;
+            front = back = nullptr;
+        }
+        else if (cur == front) {
+            pop_front();
+        }
+        else if (cur == back) {
+            pop_back();
         }
         else {
-            // current node 뒤에 삽입
-            Node* newNode = createNode(val);
-            Node* next = cur->next;
-            cur->next = newNode;
-            newNode->prev = cur;
-            newNode->next = next;
-            next->prev = newNode;
+            cur->prev->next = cur->next;
+            cur->next->prev = cur->prev;
+            deleteNode(&cur);
         }
     }
 }
+
+void List::remove(int val)
+{
+    if (!isEmpty()) {
+        Node* cur = front;
+        while (cur != nullptr) {
+            if (val == cur->val) {
+                if (front == back) {
+                    delete cur;
+                    front = back = nullptr;
+                    break;
+                }
+                else if (cur == front) {
+                    cur = cur->next;
+                    deleteNode(&front);
+                    front = cur;
+                    front->prev = nullptr;
+                }
+                else if (cur == back) {
+                    back = cur->prev;
+                    back->next = nullptr;
+                    deleteNode(&cur);
+                }
+                else {
+                    Node* tmp = cur;
+                    cur->prev->next = cur->next;
+                    cur->next->prev = cur->prev;
+                    cur = cur->next;
+                    deleteNode(&tmp);
+                }
+            }
+            else {
+                cur = cur->next;
+            }
+        }
+    }
+}
+```
+
+결과 :
+
+```
+===== List Info : push_back 1, 2, 3 =====
+1 2 3
+===== List Info : push_front 4, 5, 6 =====
+6 5 4 1 2 3
+===== List Info : pop_back =====
+6 5 4 1 2
+===== List Info : pop_front =====
+5 4 1 2
+===== List Info : insert 10 at second =====
+5 10 4 1 2
+===== List Info : erase element at third =====
+5 10 1 2
+===== List Info : erase 1 =====
+5 10 2
 ```
