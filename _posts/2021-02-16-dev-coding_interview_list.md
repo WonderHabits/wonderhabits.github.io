@@ -1,5 +1,5 @@
 ---
-title: "[STL] List container구현 (C++)"
+title: "[STL] List, Doubly Linked List로 구현하기 (C++)"
 header:
   # image: /assets/images/koin.jpg
 categories:
@@ -11,7 +11,9 @@ tags:
 toc: true
 last_modified_at: 2021-02-16
 ---
-# 1. std::list container 간략 설명
+# 1. [STL] List 간략 설명
+
+ [[STL] List](https://en.cppreference.com/w/cpp/container/list)   
 
  std::list는 어느 위치에서든 요소를 일정한 시간 삽입 및 제거할 수 있도록 지원하는 STL container종류 중 하나이다
 
@@ -23,7 +25,6 @@ last_modified_at: 2021-02-16
 [<img src="https://i.ytimg.com/vi/DzGnME1jIwY/hqdefault.jpg"/>](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   
 
  std::list가 지원하는 여러 함수 중에 우리가 구현 할 7개의 함수는 다음과 같다.
-[[STL] List](https://en.cppreference.com/w/cpp/container/list)   
 
 | Member Function | Description                                         |
 | --------------- | --------------------------------------------------- |
@@ -406,3 +407,7 @@ void List::remove(int val)
 ===== List Info : erase 1 =====
 5 10 2
 ```
+---
+# Reference
+[1. https://en.cppreference.com/w/cpp/container/list](https://en.cppreference.com/w/cpp/container/list)   
+[2. https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   
