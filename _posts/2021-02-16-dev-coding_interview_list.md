@@ -1,5 +1,5 @@
 ---
-title: "List contaier구현 (C++)"
+title: "[STL] List contaier구현 (C++)"
 header:
   # image: /assets/images/koin.jpg
 categories:
@@ -19,11 +19,21 @@ last_modified_at: 2021-02-16
 
  linked list의 자세한 내용은 아래 영상을 참고하면 된다.
 
-[[자료구조 알고리즘] 단방향 Linked List 구현 in Java](https://www.youtube.com/watch?v=C1SDkdPvQPA)
+[[자료구조 알고리즘] Linked List 개념](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   
+[<img src="https://i.ytimg.com/vi/DzGnME1jIwY/hqdefault.jpg"/>](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   
 
  std::list가 지원하는 여러 함수 중에 우리가 구현 할 7개의 함수는 다음과 같다.
+[[STL] List](https://en.cppreference.com/w/cpp/container/list)   
 
-[std::list member functions](https://www.notion.so/28625e59dfa0463cba5e964459720cb0)
+| Member Function | Description                                         |
+| --------------- | --------------------------------------------------- |
+| push_back       | 지정된 요소 값을 컨테이너 끝에 추가합니다.          |
+| push_front      | 지정된 요소 값을 컨테이너의 시작 부분에 추가합니다. |
+| pop_back        | 컨테이너의 마지막 요소를 제거합니다.                |
+| pop_front       | 컨테이너의 첫번째 요소를 제거합니다.                |
+| insert          | 컨테이너의 지정된 위치에 요소를 삽입합니다.         |
+| erase           | 지정된 위치의 값을 컨테이너에서 지웁니다.           |
+| remove          | 특정값과 같은 요소를 모두 제거합니다.               |
 
 그럼 이제 위의 함수들의 실제 sample code를 사용해보자.
 

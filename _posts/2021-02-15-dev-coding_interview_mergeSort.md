@@ -10,8 +10,10 @@ tags:
   - C++
 toc: true
 last_modified_at: 2021-02-15
+use_math: true
 ---
-[합병 정렬](https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC)
+[합병 정렬](https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC)   
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Merge-sort-example-300px.gif/220px-Merge-sort-example-300px.gif"/>](https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC)
 
  Coding Interview에서 자주 사용되는 Sorting 알고리즘 중 하나이다.
 
@@ -23,7 +25,8 @@ last_modified_at: 2021-02-15
 
  예를 들어 DB 에 키와 성적이라는 2가지 field가 존재할 때 키는 오름차순으로, 성적은 내림차순으로 정렬할 경우 다음 코드와 같이 쉽게 정렬할 수 있고 그 코드가 매우 이해하기 편하다.
 
-[[자료구조 알고리즘] 병합정렬(Merge Sort) 구현하기](https://www.youtube.com/watch?v=QAyl79dCO_k)
+[[자료구조 알고리즘] 병합정렬(Merge Sort) 구현하기](https://www.youtube.com/watch?v=QAyl79dCO_k)   
+[<img src="https://i.ytimg.com/vi/QAyl79dCO_k/hqdefault.jpg"/>](https://www.youtube.com/watch?v=QAyl79dCO_k)
 
  Merge Sort를 이해하는 가장 쉬운 방법은 위 영상을 그냥 10번만 보면 된다. Merge Sort를 이렇게 쉽게 설명한 자료는 찾아보기 매우 힘들고 특히 선생님의 딕션이 뇌에 팍팍 꽂힌다.
 

@@ -8,4 +8,4 @@ sidebar:
   nav: "posts"
 ---
 
-Sample post listing for the category `Coding Interview`.
+Coding Interview 준비
