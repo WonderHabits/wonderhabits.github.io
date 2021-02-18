@@ -1,29 +1,37 @@
 ---
-title: "[STL] List, Doubly Linked List로 구현하기 (C++)"
+title: "연결 리스트, Linked List C++ Sample Code, [STL] std::list" 
 header:
   # image: /assets/images/koin.jpg
 categories:
   - Coding Interview
 tags:
-  - Dev
   - Algorithm
   - C++
+  - Linked List
+  - 연결 리스트
+  - STL
+  - std::list
 toc: true
 last_modified_at: 2021-02-16
 ---
-# 1. [STL] List 간략 설명
+# 1. [STL] std::list
 
- [[STL] List](https://en.cppreference.com/w/cpp/container/list)   
+ <br/>
+ <div>
+ <a href="https://en.cppreference.com/w/cpp/container/list" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">std::list</div><div class="bookmark-description">std::list is a container that supports constant time insertion and removal of elements from anywhere in the container. Fast random access is not supported. It is usually implemented as a doubly-linked list. Compared to std::forward_list this container provides bidirectional iteration capability while being less space efficient.</div></div><div class="bookmark-href"><img src="https://en.cppreference.com/favicon.ico" class="icon bookmark-icon"/>https://en.cppreference.com/w/cpp/container/list</div></div></a>
+ </div>
+ <br/>
 
  std::list는 어느 위치에서든 요소를 일정한 시간 삽입 및 제거할 수 있도록 지원하는 STL container종류 중 하나이다
 
  일반적으로 doubly linked list로 구현이 된다.
 
  linked list의 자세한 내용은 아래 영상을 참고하면 된다.
-
-[[자료구조 알고리즘] Linked List 개념](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   
-[<img src="https://i.ytimg.com/vi/DzGnME1jIwY/hqdefault.jpg"/>](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   
-
+<br/>
+<div>
+<a href="https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">[자료구조 알고리즘] Linked List 개념</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/eed8a9b6/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1</div></div><img src="https://i.ytimg.com/vi/DzGnME1jIwY/hqdefault.jpg" class="bookmark-image"/></a>
+</div>
+<br/>
  std::list가 지원하는 여러 함수 중에 우리가 구현 할 7개의 함수는 다음과 같다.
 
 | Member Function | Description                                         |
