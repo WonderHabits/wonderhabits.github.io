@@ -109,7 +109,7 @@ void main() {
 5 10 2
 ```
 
-# 2. Doubly linked list 로 구현
+# 2. Linked List C++ Sample Code
 
 ```cpp
 #include <iostream>
