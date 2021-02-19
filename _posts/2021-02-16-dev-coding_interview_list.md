@@ -417,5 +417,5 @@ void List::remove(int val)
 ```
 ---
 # Reference
-[1. https://en.cppreference.com/w/cpp/container/list](https://en.cppreference.com/w/cpp/container/list)   
-[2. https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   
+1. [https://en.cppreference.com/w/cpp/container/list](https://en.cppreference.com/w/cpp/container/list)   
+2. [https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1](https://www.youtube.com/watch?v=DzGnME1jIwY&amp;list=PLjSkJdbr_gFZQp0KEoo0Y4KkCI5YqxtjZ&amp;index=1)   

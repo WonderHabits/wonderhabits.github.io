@@ -214,5 +214,5 @@ void main() {
 ```
 ---
 # Reference   
-[1. https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91\_%EC%A0%95%EB%A0%AC)   
-[2. https://www.youtube.com/watch?v=QAyl79dCO_k](https://www.youtube.com/watch?v=QAyl79dCO_k)   
+1. [https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/%ED%95%A9%EB%B3%91\_%EC%A0%95%EB%A0%AC)   
+2. [https://www.youtube.com/watch?v=QAyl79dCO_k](https://www.youtube.com/watch?v=QAyl79dCO_k)   
