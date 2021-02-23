@@ -169,23 +169,23 @@ void main() {
     int item = 70;
     auto search = bst.find(item);
     if (search != bst.end()) {
-        cout << "===== Set Info : find를 이용한 검색 : " << item << " ====="  << endl;
-        cout << item << " 검색 성공" << endl;
+        cout << "===== Set Info : find를 이용한 검색 : " << item << " =====" << endl;
+        cout << *search << " 검색 성공" << endl;
     }
     else {
         cout << "===== Set Info : find를 이용한 검색 : " << item << " =====" << endl;
-        cout << item << " 검색 실패" << endl;
+        cout << " 검색 실패" << endl;
     }
     cout << endl;
     item = 20;
     search = bst.find(item);
     if (search != bst.end()) {
         cout << "===== Set Info : find를 이용한 검색 : " << item << " =====" << endl;
-        cout << item << " 검색 성공" << endl;
+        cout << *search << " 검색 성공" << endl;
     }
     else {
         cout << "===== Set Info : find를 이용한 검색 : " << item << " =====" << endl;
-        cout << item << " 검색 실패" << endl;
+        cout << " 검색 실패" << endl;
     }
     cout << endl;
     item = 70;
@@ -230,7 +230,7 @@ void main() {
 70 검색 성공
 
 ===== Set Info : find를 이용한 검색 : 20 =====
-20 검색 실패
+ 검색 실패
 
 ===== Set Info : erase method를 이용한 삭제 : 70  =====
 40
@@ -258,13 +258,395 @@ void main() {
 그럼 이제 Binary Search Tree Sample Code를 살펴보자
 
 ```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+typedef struct _node {
+    int key;
+    _node* p;   // parent node
+    _node* rc;  // right child node
+    _node* lc;  // left child node
+}Node;
+
+class BST {
+private:
+    Node* root;
+    void _clear(Node* node);
+    void clear();
+    Node* createNode(int key);
+    void _show(Node* node);
+    Node* _find(Node* node, int key);
+    void _erase(Node** node, int key);
+    Node* getMinNode(Node* node);
+    Node* _lower_bound(Node* node, int key);
+    Node* _upper_bound(Node* node, int key);
+public:
+    BST();
+    ~BST();
+    void insert(int key);
+    void show(string str);
+    Node* find(int key);
+    void erase(int key);
+    Node* lower_bound(int key);
+    Node* upper_bound(int key);
+};
+
+void main() {
+    BST* bst = new BST();
+    bst->insert(100);
+    bst->insert(90);
+    bst->insert(80);
+    bst->insert(70);
+    //// bst는 유일한 key 값을 가지므로 70은 중복 insert 가 되지않는다.
+    bst->insert(70);
+    bst->insert(60);
+    bst->insert(50);
+    bst->insert(40);
+    bst->show("insert method를 이용한 삽입");
+
+    int item = 70;
+    Node* search = bst->find(item);
+    if (search != nullptr) {
+        cout << "===== Set Info : find를 이용한 검색 : " << item << " ====="  << endl;
+        cout << search->key << " 검색 성공" << endl;
+    }
+    else {
+        cout << "===== Set Info : find를 이용한 검색 : " << item << " =====" << endl;
+        cout << " 검색 실패" << endl;
+    }
+    cout << endl;
+    item = 20;
+    search = bst->find(item);
+    if (search != nullptr) {
+        cout << "===== Set Info : find를 이용한 검색 : " << item << " =====" << endl;
+        cout << search->key << " 검색 성공" << endl;
+    }
+    else {
+        cout << "===== Set Info : find를 이용한 검색 : " << item << " =====" << endl;
+        cout << " 검색 실패" << endl;
+    }
+    cout << endl;
+    item = 30;
+    bst->erase(item);
+    bst->show("erase method를 이용한 삭제 : " + to_string(item) + " ");
+
+    item = 50;
+    search = bst->lower_bound(item);
+    cout << "===== Set Info : lower_bound를 이용한 50보다 같거나 큰 값 검색 =====" << endl;
+    cout << search->key << endl << endl;
+
+    item = 45;
+    search = bst->lower_bound(item);
+    cout << "===== Set Info : lower_bound를 이용한 45보다 같거나 큰 값 검색 =====" << endl;
+    cout << search->key << endl << endl;
+
+    item = 50;
+    search = bst->upper_bound(item);
+    cout << "===== Set Info : upper_bound 를 이용한 50보다 큰 값 검색 =====" << endl;
+    cout << search->key << endl << endl;
+
+    item = 45;
+    search = bst->upper_bound(item);
+    cout << "===== Set Info : upper_bound 를 이용한 45보다 큰 값 검색 =====" << endl;
+    cout << search->key << endl << endl;
+}
+
+// postorder traversal 로 모든 node를 삭제한다.
+void BST::_clear(Node* node)
+{
+    if (node != nullptr) {
+        _clear(node->lc);
+        _clear(node->rc);
+        delete node;
+    }
+}
+
+void BST::clear()
+{
+    _clear(root);
+    root = nullptr;
+}
+
+Node* BST::createNode(int key)
+{
+    Node* newNode = new Node;
+    newNode->key = key;
+    newNode->p = newNode->rc = newNode->lc = nullptr;
+    return newNode;
+}
+
+void BST::insert(int key)
+{
+    Node* newNode = createNode(key);
+    if (root == nullptr) {
+        root = newNode;
+        return;
+    }
+    // leaf node 가 null 인 순간까지 내려간다.
+    Node* cur = root;
+    while (cur != nullptr) {
+        newNode->p = cur;
+        if (key < cur->key)
+            cur = cur->lc;
+        else if (key > cur->key)
+            cur = cur->rc;
+        else
+            return; // 유일한 key 값을 가지므로 같은 key 값이면 종료
+    }
+    // newNode의 parent를 저장해 두었으므로 값을 비교하여 작으면 왼쪽 크면 오른쪽에 node 생성
+    if (key < newNode->p->key)
+        newNode->p->lc = newNode;
+    else
+        newNode->p->rc = newNode;
+
+
+}
+
+// inorder traversal 로 모든 node를 오름차순으로 보여줌
+void BST::_show(Node* node)
+{
+    if (node != nullptr) {
+        _show(node->lc);
+        cout << node->key << endl;
+        _show(node->rc);
+    }
+}
+
+Node* BST::_find(Node* node, int key)
+{
+    if (node != nullptr) {
+        if (key < node->key)
+            return _find(node->lc, key);
+        else if (key > node->key)
+            return _find(node->rc, key);
+        else
+            return node;
+    }
+    return nullptr;
+}
+
+void BST::_erase(Node** node, int key)
+{
+    Node* cur = *node;
+    if (cur != nullptr) {
+        if (key < cur->key)
+            _erase(&(cur->lc), key);
+        else if (key > cur->key)
+            _erase(&(cur->rc), key);
+        else {
+            // 1. 자식 node 가 하나도 없는 경우
+            if ((cur->lc == nullptr) && (cur->rc == nullptr)) {
+                // 현재 node 가 root node일 경우
+                if (cur->p == nullptr) {
+                    root = nullptr;
+                }
+                else {
+                    // 부모 node의 자식 node 정보를 갱신
+                    if (cur->key < cur->p->key)
+                        cur->p->lc = nullptr;
+                    else
+                        cur->p->rc = nullptr;
+                }
+                delete cur;
+            }
+            // 2. 왼쪽 자식 node만 있는 경우
+            else if ((cur->lc != nullptr) && (cur->rc == nullptr)) {
+                // 현재 node 가 root node일 경우
+                // 왼쪽 자식 node가 root node가 된다.
+                if (cur->p == nullptr) {
+                    root = cur->lc;
+                    root->p = nullptr;
+                }
+                else {
+                    // 왼쪽 자식 node와 부모 node를 이어준다
+                    if (cur->key < cur->p->key) {
+                        cur->p->lc = cur->lc;
+                        cur->lc->p = cur->p;
+                    }
+                    else {
+                        cur->p->rc = cur->lc;
+                        cur->lc->p = cur->p;
+                    }
+                        
+                }
+                delete cur;
+            }
+            // 3. 오른쪽 자식 node만 있는 경우
+            else if ((cur->lc == nullptr) && (cur->rc != nullptr)) {
+                // 현재 node 가 root node일 경우
+                // 오른쪽 자식 node가 root node가 된다.
+                if (cur->p == nullptr) {
+                    root = cur->rc;
+                    root->p = nullptr;
+                }
+                else {
+                    // 오른쪽 자식 node와 부모 node를 이어준다
+                    if (cur->key < cur->p->key) {
+                        cur->p->lc = cur->rc;
+                        cur->rc->p = cur->p;
+                    }
+                    else {
+                        cur->p->rc = cur->rc;
+                        cur->rc->p = cur->p;
+                    }
+                }
+                delete cur;
+            }
+            // 4. 양쪽 자식 node가 모두 있는 경우
+            else if ((cur->lc == nullptr) && (cur->rc == nullptr)) {
+                // 오른쪽 자식 node 에서 가장 작은 node를 찾는다.
+                Node* minNode = getMinNode(cur->rc);
+                // 찾은 node를 삭제하고 현재 자리에 그 key값을 삽입한다.
+                int key = minNode->key;
+                _erase(&(cur->rc), key);
+                cur->key = key;
+            }
+        }
+    }
+}
+
+Node* BST::getMinNode(Node* node)
+{
+    Node* cur = node;
+    while (cur->lc != nullptr)
+        cur = cur->lc;
+    return cur;
+}
+
+Node* BST::_lower_bound(Node* node, int key)
+{
+    Node* cur = root;
+    Node* minNode = nullptr;
+    while (cur != nullptr) {
+        // key 값이 같으면 해당 node return
+        if (key == cur->key)
+            return cur;
+        // key 값이 현재 node 보다 작으면
+        else if (key < cur->key) {
+            // 현재 node가 가장 왼쪽의 node, 즉 key 보다 큰 마지막 node이므로 return
+            if (cur->lc == nullptr)
+                return cur;
+            // 현재까지 검사한 node 중 key보단 크지만 가장 작은 node 이므로 저장
+            minNode = cur;
+            cur = cur->lc;
+        }
+        else if (key > cur->key) {
+            // 현재 node 가 마지막 node 이므로 지금 까지 저장한 node 중 가작 작은 node return
+            if (cur->rc == nullptr) {
+                return minNode;
+            }
+            cur = cur->rc;
+        }
+    }
+    return minNode;
+}
+
+Node* BST::_upper_bound(Node* node, int key)
+{
+    Node* cur = root;
+    Node* minNode = nullptr;
+    while (cur != nullptr) {
+        // key 값이 현재 node 보다 작으면
+        if (key < cur->key) {
+            // 현재 node가 가장 왼쪽의 node, 즉 key 보다 큰 마지막 node이므로 return
+            if (cur->lc == nullptr)
+                return cur;
+            // 현재까지 검사한 node 중 key보단 크지만 가장 작은 node 이므로 저장
+            minNode = cur;
+            cur = cur->lc;
+        }
+        else if (key >= cur->key) {
+            // 현재 node 가 마지막 node 이므로 지금 까지 저장한 node 중 가작 작은 node return
+            if (cur->rc == nullptr) {
+                return minNode;
+            }
+            cur = cur->rc;
+        }
+    }
+    return minNode;
+}
+
+void BST::show(string str)
+{
+    cout << "===== Set Info : " << str.c_str() << " =====" << endl;
+    _show(root);
+    cout << endl << endl;
+}
+
+Node* BST::find(int key)
+{
+    return _find(root, key);
+}
+
+void BST::erase(int key)
+{
+    _erase(&root, key);
+}
+
+Node* BST::lower_bound(int key)
+{
+    return _lower_bound(root, key);
+}
+
+Node* BST::upper_bound(int key)
+{
+    return _upper_bound(root, key);
+}
+
+BST::BST()
+{
+    clear();
+}
+
+BST::~BST()
+{
+    clear();
+}
 
 ```
 
 결과 :
 
 ```
+===== Set Info : insert method를 이용한 삽입 =====
+40
+50
+60
+70
+80
+90
+100
 
+
+===== Set Info : find를 이용한 검색 : 70 =====
+70 검색 성공
+
+===== Set Info : find를 이용한 검색 : 20 =====
+ 검색 실패
+
+===== Set Info : erase method를 이용한 삭제 : 30  =====
+40
+50
+60
+70
+80
+90
+100
+
+
+===== Set Info : lower_bound를 이용한 50보다 같거나 큰 값 검색 =====
+50
+
+===== Set Info : lower_bound를 이용한 45보다 같거나 큰 값 검색 =====
+50
+
+===== Set Info : upper_bound 를 이용한 50보다 큰 값 검색 =====
+60
+
+===== Set Info : upper_bound 를 이용한 45보다 큰 값 검색 =====
+50
 ```
 
 ---
