@@ -129,12 +129,13 @@ std::set은 정렬된 고유한 key 값을 갖는 container이다.
 </div>
  std::unordered_map이 지원하는 여러 함수 중에 우리가 구현 할 2개의 함수는 다음과 같다.
 
-|Member Functions|Description|
-|insert|값을 삽입합니다.|
-|erase|값을 삭제합니다.|
-|find|특정 key에 매칭된 값을 찾습니다.|
-|lower_bound|주어진 key 보다 같거나 큰 첫번째 요소를 찾습니다.|
-|upper_bound|주어진 key 보다 큰 첫번째 요소를 찾습니다.|
+| Member Functions | Description                                       |
+| ---------------- | ------------------------------------------------- |
+| insert           | 값을 삽입합니다.                                  |
+| erase            | 값을 삭제합니다.                                  |
+| find             | 특정 key에 매칭된 값을 찾습니다.                  |
+| lower_bound      | 주어진 key 보다 같거나 큰 첫번째 요소를 찾습니다. |
+| upper_bound      | 주어진 key 보다 큰 첫번째 요소를 찾습니다.        |
 
 그럼 이제 위의 함수들의 실제 sample code를 사용해보자.
 
