@@ -1,5 +1,5 @@
 ---
-title: "합병 정렬, Merge Sort C++ Sample Code" 
+title: "합병 정렬, Merge Sort C++ Sample Code"
 header:
   # image: /assets/images/koin.jpg
 categories:
