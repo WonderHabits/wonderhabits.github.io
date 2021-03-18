@@ -244,8 +244,229 @@ void main() {
 ===== Priority Queue : Max Heap =====
 6 5 4 3 2 1
 ```
+# 3. Search, Lazy Deletion 
 
-# 3. Reference
+Priority Queie에서 종종 특정 data의 값을 업데이트 한다거나 삭제할 경우가 발생한다.
+하지만 그 데이터수가 많을 경우에 모든 데이터를 pop해서 값을 update 하거나 삭제한 뒤 다시 push하는 방식은
+너무 바보 같은 짓이므로 다음과 같이 id 와 heap index 를 연결하여 $O(1)$의 복잡도로 값을 변경하거나 삭제 가능하다.
+Lazy Deletion은 특정 node에 삭제 flag를 두어 나중에 top 검색 시 이미 삭제된 node는 pop하는 방식으로 동작하게 된다.
+
+추가로 구현 할 2개의 함수는 다음과 같다.
+
+| Member Functions | Description                 | 복잡도 |
+| ---------------- | --------------------------- | ------ |
+| replace          | 가장 상위 요소에 접근       | $O(1)$ |
+| remove           | 요소를 삽입하고 내부를 정렬 | $O(1)$ |
+
+```cpp
+#include <iostream>
+#define ROOT 0
+#define SWAP(T, x, y){T t;t=x;x=y;y=t;}
+
+#define MAX 50000
+using namespace std;
+
+typedef struct _node {
+    bool deleted;
+    int id;
+    int val;
+}Node;
+
+//cache db
+Node db[MAX];
+//node의 id가 heap tree에서 어디에 위치하는지 확인
+int id2db[MAX];
+
+class PQ {
+private:
+    int _size;
+    int P(int i) { return (i - 1) / 2; }
+    int LC(int i) { return (i * 2) + 1; }
+    int RC(int i) { return (i * 2) + 2; }
+public:
+    PQ() { init(); }
+    ~PQ() {}
+    void init();
+    bool empty();
+    int size();
+    Node top();
+    void pop();
+    void push(int id, int val);
+    void update(int index);
+    void downdate(int index);
+    void replace(int id, int newVal);
+    void remove(int id);
+};
+
+void PQ::init()
+{
+    _size = 0;
+}
+
+bool PQ::empty()
+{
+    return (_size == 0);
+}
+
+int PQ::size()
+{
+    return _size;
+}
+
+Node PQ::top()
+{
+    while (db[ROOT].deleted) {
+        pop();
+    }
+    return db[ROOT];
+}
+
+void PQ::pop()
+{
+    // 1. range check
+    if (empty()) {
+        cout << "Error" << endl;
+        return;
+    }
+    // 2. 노드의 처음과 마지막을 swap 하고 size를 하나 줄인다.
+    SWAP(int, id2db[db[ROOT].id], id2db[db[_size - 1].id]);
+    SWAP(Node, db[ROOT], db[_size - 1]);
+    _size -= 1;
+    int cur = ROOT;
+    downdate(cur);
+}
+
+void PQ::push(int id, int val)
+{
+    // 1. range check
+    if (_size + 1 > MAX) {
+        cout << "Error" << endl;
+        return;
+    }
+    // 2. 노드의 마지막에 값을 넣고 비교하면서 올린다.
+    // max heap 구현
+    int cur = _size;
+    db[cur].val = val;
+    db[cur].id = id;
+    db[cur].deleted = false;
+    id2db[id] = cur;
+    _size++;
+    update(cur);
+}
+
+void PQ::update(int index)
+{
+    int cur = index;
+    while (cur > ROOT) {
+        if (db[P(cur)].val > db[cur].val) {
+            break;
+        }
+        else {
+            SWAP(int, id2db[db[cur].id], id2db[db[P(cur)].id]);
+            SWAP(Node, db[cur], db[P(cur)]);
+        }
+        cur = P(cur);
+    }
+}
+
+void PQ::downdate(int index)
+{
+    int cur = index;
+    // child node 가 있을때까지 == left child가 size보다 작을 때까지
+    while (LC(cur) < _size) {
+        int child;
+        // left child 만 있으므로 child 는 left child
+        if (RC(cur) == _size) {
+            child = LC(cur);
+        }
+        // max heap 이므로 큰놈
+        else {
+            child = db[LC(cur)].val > db[RC(cur)].val ? LC(cur) : RC(cur);
+        }
+        // child 보다 크면 끝
+        if (db[cur].val > db[child].val) {
+            break;
+        }
+        else {
+            SWAP(int, id2db[db[cur].id], id2db[db[child].id]);
+            SWAP(Node, db[cur], db[child]);
+        }
+        cur = child;
+    }
+}
+
+void PQ::replace(int id, int newVal)
+{
+    int cur = id2db[id];
+    db[cur].val = newVal;
+    update(cur);
+    downdate(cur);
+}
+
+void PQ::remove(int id)
+{
+    int cur = id2db[id];
+    db[cur].deleted = true;
+}
+
+void main() {
+    PQ pq;
+    pq.push(100, 10);
+    pq.push(101, 5);
+    pq.push(200, 6);
+    pq.push(201, 7);
+    pq.push(300, 8);
+    pq.push(301, 9);
+    pq.push(400, 4);
+    pq.push(401, 1);
+    pq.push(500, 2);
+    pq.push(501, 3);
+
+    for (register int i = 0; i < pq.size(); i++) {
+        cout << "id : " << db[i].id << ", val : " << db[i].val << ", loc : " << id2db[db[i].id] << ", deleted : " << db[i].deleted << endl;
+    }
+
+    pq.replace(501, 100);
+    cout << "501 replace new value to 100" << endl;
+    for (register int i = 0; i < pq.size(); i++) {
+        cout << "id : " << db[i].id << ", val : " << db[i].val << ", loc : " << id2db[db[i].id] << ", deleted : " << db[i].deleted << endl;
+    }
+
+    pq.replace(400, 200);
+    cout << "501 replace new value to 100" << endl;
+    for (register int i = 0; i < pq.size(); i++) {
+        cout << "id : " << db[i].id << ", val : " << db[i].val << ", loc : " << id2db[db[i].id] << ", deleted : " << db[i].deleted << endl;
+    }
+
+    pq.replace(201, 200);
+    cout << "501 replace new value to 100" << endl;
+    for (register int i = 0; i < pq.size(); i++) {
+        cout << "id : " << db[i].id << ", val : " << db[i].val << ", loc : " << id2db[db[i].id] << ", deleted : " << db[i].deleted << endl;
+    }
+
+    cout << "remove 300" << endl;
+    pq.remove(300);
+    for (register int i = 0; i < pq.size(); i++) {
+        cout << "id : " << db[i].id << ", val : " << db[i].val << ", loc : " << id2db[db[i].id] << ", deleted : " << db[i].deleted << endl;
+    }
+    cout << "remove 201" << endl;
+    pq.remove(201);
+    for (register int i = 0; i < pq.size(); i++) {
+        cout << "id : " << db[i].id << ", val : " << db[i].val << ", loc : " << id2db[db[i].id] << ", deleted : " << db[i].deleted << endl;
+    }
+    cout << "remove 200" << endl;
+    pq.remove(200);
+    for (register int i = 0; i < pq.size(); i++) {
+        cout << "id : " << db[i].id << ", val : " << db[i].val << ", loc : " << id2db[db[i].id] << ", deleted : " << db[i].deleted << endl;
+    }
+
+    while (!pq.empty()) {
+        cout << "Pop info - id : " << pq.top().id << ", val : " << pq.top().val << ", loc : " << id2db[pq.top().id] << ", deleted : " << pq.top().deleted << endl;
+        pq.pop();
+    }
+}
+```
+# 4. Reference
 
 1. [https://en.cppreference.com/w/cpp/container/priority_queue](https://en.cppreference.com/w/cpp/container/priority_queue)
 2. [https://en.wikipedia.org/wiki/Binary_heap](https://en.wikipedia.org/wiki/Binary_heap)
