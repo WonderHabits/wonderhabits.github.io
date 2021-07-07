@@ -6,8 +6,12 @@ categories:
   - Essay
 tags:
   - 갑상선암
-  - 어느부부
+  - 예후
   - 서울대학교 병원
+  - 림프절 전이
+  - 결절
+  - 세침 검사
+  - 악성 종양
 toc: true
 last_modified_at: 2021-07-07
 use_math: true
