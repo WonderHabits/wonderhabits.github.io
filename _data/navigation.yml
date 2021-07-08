@@ -8,18 +8,18 @@ main:
     url: /about/
   - title: "Posts"
     url: /categories/
-  - title: "Pull Up Park"
-    url: /pullUpPark/
+  # - title: "Pull Up Park"
+  #   url: /pullUpPark/
 
 posts:
   - title: Dev
     children:
       - title: "Coding Interview"
         url: /categories/dev-coding-interview/
-  - title: Prose
+  - title: Cancer
     children:
       - title: "Essay"
-        url: /categories/prose-essay/
+        url: /categories/cancer-essay/
   #     - title: "Flutter"
   #       url: /categories/dev-flutter/
   #     - title: "GitHub"

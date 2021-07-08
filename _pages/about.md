@@ -2,7 +2,7 @@
 title: "About"
 permalink: /about/
 ---
-2021 Wonder Habits Github chart
-<div>
-<img src="http://ghchart.rshah.org/WonderHabits" alt="2021 WonderHabits Github chart" />
-</div>
+ **<center>모든 고통은 무지에서 온다</center>**  
+ <center>Buddha</center>  
+
+
