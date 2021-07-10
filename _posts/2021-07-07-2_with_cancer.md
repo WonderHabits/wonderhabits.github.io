@@ -5,7 +5,7 @@ header:
 categories:
   - Essay
 tags:
-  - 갑상선암
+  - 갑상선 암
   - 예후
   - 서울대학교 병원
   - 림프절 전이
