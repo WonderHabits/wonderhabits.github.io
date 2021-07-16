@@ -3,7 +3,7 @@ title: "모든 고통은 무지에서 온다"
 header:
   # image: /assets/images/koin.jpg
 categories:
-  - Essay
+  - Cancer
 tags:
   - 갑상선 암
   - 서울대학교 병원

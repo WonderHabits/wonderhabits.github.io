@@ -16,10 +16,10 @@ posts:
     children:
       - title: "Coding Interview"
         url: /categories/dev-coding-interview/
-  - title: Cancer
+  - title: Essay
     children:
-      - title: "Essay"
-        url: /categories/cancer-essay/
+      - title: "Cancer"
+        url: /categories/essay-cancer/
   #     - title: "Flutter"
   #       url: /categories/dev-flutter/
   #     - title: "GitHub"

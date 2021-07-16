@@ -3,7 +3,7 @@ title: "암과함께"
 header:
   # image: /assets/images/koin.jpg
 categories:
-  - Essay
+  - Cancer
 tags:
   - 갑상선 암
   - 예후
