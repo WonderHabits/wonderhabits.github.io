@@ -20,6 +20,8 @@ posts:
     children:
       - title: "Cancer"
         url: /categories/essay-cancer/
+      - title: "Writing"
+        url: /categories/essay-writing/
   #     - title: "Flutter"
   #       url: /categories/dev-flutter/
   #     - title: "GitHub"
