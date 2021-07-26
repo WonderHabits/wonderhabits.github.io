@@ -15,7 +15,7 @@ tags:
   - 포도당(glucose)
   - 효소(enzyme)
 toc: true
-last_modified_at: 2021-07-22
+last_modified_at: 2021-07-26
 use_math: true
 ---
 
