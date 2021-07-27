@@ -1,43 +1,30 @@
 ---
-title: "물질대사(metabolism)" 
+title: "정상 세포에서 암 세포로" 
 header:
   # image: /assets/images/koin.jpg
 categories:
   - Cancer
 tags:
-  - 물질 대사(metabolism)
-  - 동화 작용(catabolism)
-  - 이화 작용(anabolism)
-  - 발열 반응(exergonic reaction)
-  - 흡열 반응(endergonic reaction)
-  - 세포 호흡(cellular respiration)
-  - 소화 작용(digestion)
-  - 포도당(glucose)
-  - 효소(enzyme)
+  - 암 세포(cancer cell)
+  - 정상 세포(normal cell)
+  - 종양(tumor)
+  - 악성종양(malignant tumor)
+  - 양성종양(benign tumor)
+  - 핵(nucleus)
+  - 염색체(chromosome)
+  - 혈관 신생(angiogenesis)
 toc: true
-last_modified_at: 2021-07-26
+last_modified_at: 2021-07-22
 use_math: true
 ---
 
- 암세포는 어떤 방식으로 에너지를 얻는 걸까? 가장 먼저 이해해야 할 것은 물질대사(metabolism)이다. 해당 내용은 고2의 생물 교과 과정에 포함이 되어있었다. 난 배운적이 없는거 같아서 매우 낯선 내용이었다. 일단 정리해 보았다.
+사람의 몸 안에는 수 십조개 이상의 세포(cell)가 있다. 이 세포들이 모여 작은 조직을 만들고 이 조직들이 모여 심장, 폐와 같은 장기를 만든다. 장기들의 정상적인 작동과 유지를 위해선 건강한 세포가 항시 필요하다. 세포는 둘로 분열하여 건강하고 새로운 세포를 만드는 과정을 반복한다. 결함이 있는 세포들은 교체되고 수명을 다한 뒤 파괴된다. 이와 같이 모든 세포들은 세포 분열을 통해 새로 만들어지고 적제 적소에서 자기 역할을 하다가 죽도록 프로그램 되어있다.
 
- 물질대사(metabolism)는 생명체 내에서 일어나는 모든 화학 반응을 말한다. 동화 작용(catabolism)과 이화 작용(anabolism)으로 나뉠수 있다. 동화 작용(catabolism)은 크기가 작은 저분자 물질을 크기가 큰 고분자 물질로 합성하면서 에너지를 흡수하는 흡열반응(endergonic reaction)이다. 이화 작용(anabolism)은 고분자물질을 저분자 물질로 분해 하면서 에너지를 방출하는 발열 반응(exergonic reaction)이다.  
+세포의 중심에는 핵(nucleus)이 있다. 핵은 여러 가지 염색체(chromosome)를 포함하고 있다. 염색체는 생명체의 유전 정보 담은 DNA들을 포함하고 있다. 이들이 바로 세포의 프로그램을 조정하는 장치다. 그런데 가끔씩 프로그램에 오류가 생긴다. 핵은 비정상적인 명령을 보내고 세포는 돌연변이가 된다. 돌연변이 세포는 통제 불가능하게 된다. 결함을 가진 이 돌연변이 세포는 무질서하게 증식다가 종양을 만든다. 비정상적인 단일 세포에서 1cm정도 크기의 종양으로 자라는데 보통 10년에서 30년정도 걸린다. 
 
- 동화 작용(catabolism)의 예로는 식물에서 일어나는 광합성(photo synthesis)과 동식물 모두에서 일어나는 단백질 합성(protein synthesis)이 있고 이화 작용(anabolism)은 세포 호흡(cellular respiration)이나 소화 기관에서 일어는 소화 작용(digestion)이 대표적인 예이다.  
+이렇게 자란 종양의 종류엔 양성종양, 악성종양이 있다. 악성 종양이 바로 암이다. 악성 종양, 즉 암세포는 살기 위해 많은 혈관을 만든다. 혈관을 통해 산소와 영양분을 공급한다. 이것을 혈관 신생(angiogenesis)이라고 부른다. 문제는 이렇게 만들어진 혈관으로 인해 주위에 정상세포가 정상적으로 공급받아야 할 영양분까지 암세포가 차지한다. 곧 주위의 정상세포는 아사하게 된다. 암세포가 혈관을 통해 인접부위로 침투하여 주변 장기로 퍼지기 시작하면 정말로 위험해진다. 곧 목숨을 잃게 되는 것이다.
 
- 동화 작용(catabolism)의 그래프는 에너지가 낮은 반응물이 에너지를 흡수하면서 높은 에너지를 가진 생성물이 되는 것으로 표현할 수 있고 이화 작용(anabolism)은 에너지가 높은 반응물이 에너지를 방출하면서 낮은 에너지를 가진 생성물이 되는 것으로 나타낸다.
+# Reference   
+1. [https://www.cancer.ca/en/cancer-information/cancer-101/what-is-cancer/how-cancer-starts-grows-and-spreads/?region=on](https://www.cancer.ca/en/cancer-information/cancer-101/what-is-cancer/how-cancer-starts-grows-and-spreads/?region=on)   
 
- 물질대사(metabolism)는 반드시 효소(enzyme)가 관여하며 에너지를 흡수하거나 방출하는 에너지 출입이 함께 일어나고 반응이 단계적으로 일어난다는 특징을 가진다.
 
- 물질대사(metabolism)의 대표적인 예인 세포호흡(cellular respiration)과 생명체 바깥에서 일어나는 화학반응의 대표적인 예인 포도당(glucose)연소를 비교하면 세포호흡(cellular respiration)은 37도씨 정도의 체온에서 일어나고 포도당(glucose)연소는 400도씨 정도의 고온에서 일어난다.
-
- 이처럼 체온정도의 낮은 온도에서도 화학반응이 일어나기 위해서는 반드시 효소(enzyme)가 필요하게 된다.
-
- 세포호흡(cellular respiration)은 포도당(glucose)을 조금씩 분해하면서 소량의 에너지가 단계적으로 방출되지만 연소는 포도당을 한번에 분해하는 과정을 통해 대량의 에너지가 한꺼번에 방출된다 .
-
- 공통점은 두 경우 모두 산소와 결합하는 산화 반응(oxidation) 통해 에너지를 방출하는 발열반응(exergonic reaction)이라는 것과 같은 양의 포도당(glucose)이 분해되었을경우 방출되는 에너지의 양은 같다는 것이다.
-
- 자료를 찾을 때 마다 느끼는 중요한 것이있다. 바로 관련 용어를 한글로 번역한 것 보단 영어 자체로 이해해야 한다. 한글로 번역된 자료의 수는 매우 제한적이다. 내용도 그다지 좋아보이지 않는다. 억지로 번역을 한 느낌을 지울 수 없다. 예를 들어 위 본문에서 발열반응(exergonic reaction)과 흡열반응(endergonic reaction)이 좋은 예이다. 두 용어 모두 물질대사(metabolism)의 과정에서 발생하는 에너지 방출, 흡수에 관한 내용이다. 하지만 억지로 번역하다보니 그나마 비슷한 화학에서 사용하는 발열, 흡열이라는 단어를 사용했다. 하지만 구글에 발열작용, 흡열작용이라고 검색할 경우 내가 원하는 자료를 찾을 수 없었다.
- 좀 어렵더라도 영어로 받아들여야 한다. 그래야 좋은 내용의 지식을 얻을 수 있다.
-
- "모든 고통은 무지에서 온다"
