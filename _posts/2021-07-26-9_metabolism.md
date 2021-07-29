@@ -18,6 +18,7 @@ toc: true
 last_modified_at: 2021-07-26
 use_math: true
 ---
+ ![1](https://user-images.githubusercontent.com/60498900/127492284-d59a333f-f09c-4661-a681-e1b61038ff5d.png){:.align-center}
 
  암세포는 어떤 방식으로 에너지를 얻는 걸까? 가장 먼저 이해해야 할 것은 물질대사(metabolism)이다. 해당 내용은 고2의 생물 교과 과정에 포함이 되어있었다. 난 배운적이 없는거 같아서 매우 낯선 내용이었다. 일단 정리해 보았다.
 
