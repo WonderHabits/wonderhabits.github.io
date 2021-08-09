@@ -22,8 +22,10 @@ posts:
         url: /categories/essay-cancer/
       - title: "Writing"
         url: /categories/essay-writing/
-  #     - title: "Flutter"
-  #       url: /categories/dev-flutter/
+  - title: Drawing
+    children:
+      - title: "Drawing"
+        url: /categories/drawing/
   #     - title: "GitHub"
   #       url: /categories/dev-github/
   #     - title: "Koin"
