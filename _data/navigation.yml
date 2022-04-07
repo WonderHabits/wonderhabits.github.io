@@ -14,18 +14,18 @@ main:
 posts:
   - title: Dev
     children:
-      - title: "Coding Interview"
-        url: /categories/dev-coding-interview/
-  - title: Essay
-    children:
-      - title: "Cancer"
-        url: /categories/essay-cancer/
-      - title: "Writing"
-        url: /categories/essay-writing/
-  - title: Drawing
-    children:
-      - title: "Drawing"
-        url: /categories/drawing/
+      - title: "Jekyll Blog Tips"
+        url: /categories/dev-jekyll-blog-tips/
+  # - title: Essay
+  #   children:
+  #     - title: "Cancer"
+  #       url: /categories/essay-cancer/
+  #     - title: "Writing"
+  #       url: /categories/essay-writing/
+  # - title: Drawing
+  #   children:
+  #     - title: "Drawing"
+  #       url: /categories/drawing/
   #     - title: "GitHub"
   #       url: /categories/dev-github/
   #     - title: "Koin"
