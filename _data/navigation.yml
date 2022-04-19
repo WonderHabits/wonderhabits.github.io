@@ -14,8 +14,8 @@ main:
 posts:
   - title: Dev
     children:
-      - title: "Jekyll Blog Tips"
-        url: /categories/dev-jekyll-blog-tips/
+      - title: "Jekyll"
+        url: /categories/dev-jekyll/
   # - title: Essay
   #   children:
   #     - title: "Cancer"

@@ -3,14 +3,14 @@ title: "Jekyll Blog Build Command"
 header:
   # image: /assets/images/koin.jpg
 categories:
-  - Jekyll Blog
+  - Jekyll
 tags:
-  - Jekyll Blog Build Command
+  - Jekyll
 toc: true
 last_modified_at: 2022-04-07
 use_math: true
 ---
-Jekyll Blog Build Command 는 다음과 같다.   
+Jekyll Blog의 Build Command 는 다음과 같다.   
 
 ```bash
 bundle exec jekyll serve

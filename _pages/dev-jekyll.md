@@ -1,8 +1,8 @@
 ---
 title: Jekyll Blog
 layout: category
-permalink: /categories/dev-jekyll-blog-tips/
-taxonomy: Jekyll Blog
+permalink: /categories/dev-jekyll/
+taxonomy: Jekyll
 author_profile: false
 sidebar:
   nav: "posts"
