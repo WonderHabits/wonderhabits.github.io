@@ -18,6 +18,8 @@ posts:
         url: /categories/dev-github-blog/
       - title: "Notion"
         url: /categories/dev-notion/
+      - title: "Android"
+        url: /categories/dev-android/
   # - title: Essay
   #   children:
   #     - title: "Cancer"
