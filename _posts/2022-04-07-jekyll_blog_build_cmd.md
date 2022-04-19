@@ -1,16 +1,17 @@
 ---
-title: "Jekyll Blog Build Command"
+title: "Github Blog(Jekyll) Build Command"
 header:
   # image: /assets/images/koin.jpg
 categories:
-  - Jekyll
+  - Github Blog
 tags:
+  - Github Blog
   - Jekyll
 toc: true
 last_modified_at: 2022-04-07
 use_math: true
 ---
-Jekyll Blog의 Build Command 는 다음과 같다.   
+Github Blog(Jekyll)의 Build Command 는 다음과 같다.   
 
 ```bash
 bundle exec jekyll serve

@@ -14,8 +14,8 @@ main:
 posts:
   - title: Dev
     children:
-      - title: "Jekyll"
-        url: /categories/dev-jekyll/
+      - title: "Github Blog"
+        url: /categories/dev-github-blog/
       - title: "Notion"
         url: /categories/dev-notion/
   # - title: Essay
