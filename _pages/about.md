@@ -2,6 +2,7 @@
 title: "About"
 permalink: /about/
 author_profile: true
+hits: true
 sidebar:
   nav: "posts"
 ---
