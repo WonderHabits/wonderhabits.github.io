@@ -291,7 +291,6 @@ defaults:
       related: true
       sidebar:
         nav: "posts"
-      hits: true
   # _pages
   - scope:
       path: ""
