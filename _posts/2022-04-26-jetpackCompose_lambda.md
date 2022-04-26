@@ -42,14 +42,14 @@ class MainActivity : ComponentActivity() {
 3. Row   
 ![](https://user-images.githubusercontent.com/60498900/165269873-25ee7a1c-cd2a-447d-9b47-bffee22a582f.png)   
 
-모두 공통적으로 마지막 parameter인 content의 return 값은 @Composable인 Lambda Function('()->Unit')이다. 결국 다음과 같은 a->b->c 단계를 통해 람다식을 통해 간단하게 표현할 수 있다.
+모두 공통적으로 마지막 parameter인 content의 return 값은 @Composable인 Lambda Function('()->Unit')이다. 결국 다음과 같은 a->b->c 모양의 코드 생략 단계를 거치면서 람다식을 통해 간단하게 표현할 수 있다.
 
 ```kotlin
 // a. 마지막 parameter 인 content에  @Composable Lambda Function 사용
 setContent(content = @Composable{})
-// b. Kotlin에선 마지막 paramter에 Lambda Function 사용 시 중괄호 밖으로 꺼낼 수 있다.
+// b. Kotlin에선 마지막 parameter에 Lambda Function 사용 시 대괄호를 중괄호 밖으로 꺼낼 수 있다.
 setContent(){}
-// c. Lambda Function에 아무런 parameter가 필요 하지 않으면 생략 가능
+// c. Lambda Function에 아무런 parameter가 필요 하지 않으면 중괄호 생략 가능
 setContent{}
 ```
 
