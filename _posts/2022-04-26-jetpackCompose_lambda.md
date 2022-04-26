@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 }
 ```
 근데 일반적은 코드와는 달리 몬가 많이 생략되어있는 느낌이다. Composable Component옆에 중괄호들은 다 어디가고 바로 대괄호를 쓰고 있다.   
-위의 코드에서 *setContent*와 Composable Component인 *Box*, *Row*의 reference 코드를 잘 살펴 보자.   
+위의 코드에서 *setContent*와 Composable Component인 *Box*, *Row*가 정의된 코드를 잘 살펴 보자.   
 1. setContent   
 ![](https://user-images.githubusercontent.com/60498900/165269825-0e2cadfb-0998-4c79-bb24-90b44dc157ac.png)
 
