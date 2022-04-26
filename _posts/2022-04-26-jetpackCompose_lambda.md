@@ -1,5 +1,5 @@
 ---
-title: "Jetpack Compose 개발 시 이해해두면 좋은 Lambda Function"
+title: "Jetpack Compose로 개발 시 이해해두면 좋은 Lambda Function"
 header:
   # image: /assets/images/koin.jpg
 categories:
@@ -14,8 +14,8 @@ toc: true
 last_modified_at: 2022-04-26
 use_math: true
 ---
-# Jetpack Compose 개발 시 이해해두면 좋은 Lambda Function
-Jetpack Compose를 이용해 개발하다보면 일반적으로 다음과 같이 Composable 요소를 연속적으로 나열하게 된다   
+# Jetpack Compose로 개발 시 이해해두면 좋은 Lambda Function
+Jetpack Compose를 이용해 개발하다보면 일반적으로 다음과 같이 Jetpack Compose Component를 연속적으로 나열하게 된다   
 ```kotlin
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,8 +31,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 ```
-근데 일반적은 코드와는 달리 몬가 많이 생략되어있는 느낌이다. Composable Component옆에 중괄호들은 다 어디가고 바로 대괄호를 쓰고 있다.   
-위의 코드에서 *setContent*와 Composable Component인 *Box*, *Row*가 정의된 코드를 잘 살펴 보자.   
+근데 일반적은 코드와는 달리 몬가 많이 생략되어있는 느낌이다. *Box*, *Row*등의 Jetpack Compose Component옆에 중괄호들은 다 어디가고 바로 대괄호를 쓰고 있다.   
+위의 코드에서 *setContent*와 Jetpack Compose Component인 *Box*, *Row*가 정의된 코드를 잘 살펴 보자.   
 1. setContent   
 ![](https://user-images.githubusercontent.com/60498900/165269825-0e2cadfb-0998-4c79-bb24-90b44dc157ac.png)
 
