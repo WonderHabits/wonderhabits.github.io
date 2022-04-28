@@ -12,7 +12,6 @@ last_modified_at: 2022-04-19
 use_math: true
 ---
 
-
 Android Jetpack Compose 를 시작하기 위해 Empty Compose Activity로 프로젝트를 생성했다.
 
 ![](https://user-images.githubusercontent.com/60498900/163928292-5767bb9b-32d1-411c-abe8-c8d14dcca4e0.png)

@@ -11,7 +11,6 @@ toc: true
 last_modified_at: 2022-04-07
 use_math: true
 ---
-# Github Blog를 로컬 빌드해서 확인하는 방법.
 Jekyll Build Command 는 다음과 같다.   
 
 ```bash

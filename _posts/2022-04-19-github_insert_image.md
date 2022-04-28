@@ -12,11 +12,8 @@ toc: true
 last_modified_at: 2022-04-19
 use_math: true
 ---
-
 Github Blog의 포스팅을 작성할 때 이미지를 직접 업로드 하지 않음.   
 일반적으로 Github에 이슈를 등록한 후 Mark Down 문서 포스팅시 해당 이미지 링크를 삽입하는 방법을 사용.
-
-## GitHub Blog 이미지 업로드 방법
 
 1. GitHub Blog Repository -> Issue -> New Issue
 ![](https://user-images.githubusercontent.com/60498900/163925079-aac4e56b-5334-4592-abda-91d3eb88e009.png)

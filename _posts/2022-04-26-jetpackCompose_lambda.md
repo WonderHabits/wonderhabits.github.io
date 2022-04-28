@@ -14,7 +14,6 @@ toc: true
 last_modified_at: 2022-04-26
 use_math: true
 ---
-# Jetpack Compose로 개발 시 이해해두면 좋은 Lambda Function
 Jetpack Compose를 이용해 개발하다보면 일반적으로 다음과 같이 Jetpack Compose Component를 연속적으로 나열하게 된다   
 ```kotlin
 class MainActivity : ComponentActivity() {

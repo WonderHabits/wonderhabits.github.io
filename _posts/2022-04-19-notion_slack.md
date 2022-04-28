@@ -12,7 +12,7 @@ toc: true
 last_modified_at: 2022-04-19
 use_math: true
 ---
-## Notion과 Slack 연동하기
+# Notion과 Slack 연동하기
 Notion에 To do 리스트를 위한 Kanban Board를 추가하고 Slack과 연동하는 방법.
 
 1. Notion에 페이지 추가   
@@ -42,13 +42,13 @@ Notion에 To do 리스트를 위한 Kanban Board를 추가하고 Slack과 연동
 9. Notion과 연동 메세지 확인   
 ![](https://user-images.githubusercontent.com/60498900/163900155-2286cc89-c499-4567-919d-f4bab42b2f31.png)
 
-## Notion에 To Do 리스트 Task 추가 시 메세지 확인
+# Notion에 To Do 리스트 Task 추가 시 메세지 확인
 - Notion   
 ![Notion](https://user-images.githubusercontent.com/60498900/163900072-b3ae4f5b-fbff-4b46-944d-cd3e21673342.png)
 - Slack   
 ![Notion](https://user-images.githubusercontent.com/60498900/163900077-b457d282-9976-403c-825f-49fd73576652.png)
 
-## Notion에 To Do 리스트 Task 이동 시 메세지 확인
+# Notion에 To Do 리스트 Task 이동 시 메세지 확인
 - Notion   
 ![Notion](https://user-images.githubusercontent.com/60498900/163900084-85c104aa-dab1-44f2-82d5-81021d50d01a.png)
 - Slack   
